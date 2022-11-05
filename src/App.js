@@ -1,41 +1,15 @@
-//import Header from "./companents/Header";
-import Login from "./companents/Login";
+import User from "./companents/User";
 
-const isloggedIn = false;
-const fullname = "Ozgur VURGUN";
-
-//KOŞULLU RENDER İŞLEMİ
-
+//PROPS YAPISI
+//companente anahtar değer çiftleriyle veriyi gönderip orada fonksiyonun parametresi olarak verileri yakalıyoruz.
+//veriler dizi olarak gidiyor yani aldığımız veriyi örneğin props.name, props.surname, props.age şeklinde yakalıyoruz.
 function App() {
-  //YONTEM 1
-  //KISA İF ELSE İFADESİ
-
-  // return (
-  //   <div className="test">
-  //     {isloggedIn ? <div>Hoşgeldin {fullname}</div> : <a href="#/">Giriş Yapın</a>}
-  //   </div>
-  // );
-
-
-  //YONTEM 2
-  //isloggedIn varsa ismi basıyoruz ,isloggedIn yoksa giriş yap linkini basıyoruz.
-
-  // return (
-  //   <div className="test">
-  //     {isloggedIn && <div>Hoşgeldin {fullname}</div>}
-
-  //     {!isloggedIn && <a href="#/">Giriş Yapın</a>}
-  //   </div>
-  // );
-
-
-  //YONTEM 3
-  //isloggedIn varsa ismi bas, yoksa Login göster
-
-   return (
-     <div className="test">
-       {isloggedIn ? <div>Hoşgeldin {fullname}</div> : <Login/>}
-     </div>
-   );
+  return (
+    <div>
+      <User name="Ozgur VURGUN" city="Izmir" age={22} />
+      <User name="Ece Sensoz" city="Izmir" age={22} />
+      <User name="Irem Keskin" city="Istanbul" age={25} />
+    </div>
+  );
 }
 export default App;
