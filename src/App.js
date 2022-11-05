@@ -1,6 +1,6 @@
 import User from "./companents/User";
 
-//BİR OBJEYİ, PROERTY OLARAK GONDERME
+//BİR ARRAYİ, PROERTY OLARAK GONDERME
 const user = {
   name: "ozgur",
   city: "Izmir",
@@ -12,7 +12,7 @@ function App() {
     <div>
 
       {/*veriyi dizi olarak gönderme */}
-      <User data={user} />
+      <User data={user} friends={["ahmet","ece","irem"]} />
     </div>
   );
 }
